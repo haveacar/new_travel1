@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home
+{% endblock %}
+
+{% block body %}
+    <br>
+    <div style="max-width:80%; display:block; margin: auto;">
+        <img class="img-fluid" src="{{ url_for('static', filename='img/Green_Airline.jpeg') }}" alt="..."/>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h5 class="text-center">Your penchant for travel is partly to blame for putting the environment in peril. Commercial flying accounts for about 3% of global carbon emissions, and that percentage is likely to increase as more people turn to the skies for travel.</h5>
+                <br>
+                <h5 class="text-center">But while passenger numbers are growing by 5% each year, airlines have succeeded in keeping their emission percentages to approximately half of that.</h5>
+                <hr>
+            </div>
+        </div>
+    </div>
+        <div class="container">
+            <h4>Most Sustainable Airlines for Flying Green:</h4>
+            <div class="list-unstyled">
+                   <ul class="list-unstyled">
+                        <li><strong>EasyJet</strong>: British low-cost carrier, aiming to be the world's most carbon-efficient airline.</li>
+                        <li><strong>KLM</strong>: Dutch airline investing in sustainable aviation fuel and setting sustainability goals.</li>
+                        <li><strong>Lufthansa Group</strong>: Investing in fuel-efficient planes and researching sustainable aviation fuels.</li>
+                        <li><strong>United Airlines</strong>: American carrier committed to reducing emissions by 50% by 2050.</li>
+                        <li><strong>Air France</strong>: Working to reduce carbon footprint and investing in fuel-efficient aircraft.</li>
+                        <li><strong>Alaska Airlines</strong>: Recognized for sustainability initiatives, improving fuel efficiency, and reducing waste.</li>
+                        <li><strong>Etihad Airways</strong>: UAE-based airline investing in sustainability initiatives and more fuel-efficient aircraft.</li>
+                        <li><strong>Qantas</strong>: Australian airline committed to net zero emissions by 2050 and investing in sustainable aviation fuel.</li>
+                        <li><strong>Finnair</strong>: Finnish carrier committed to reducing emissions and improving sustainability.</li>
+                        <li><strong>Southwest Airlines</strong>: Recognized for conservation efforts, recycling cabin waste, and operating fuel-efficient aircraft.</li>
+                    </ul>
+            </div>
+        </div>
+
+    <!-- Kiwi-->
+    <div>
+        <h2>Book cheap flights from Tel Aviv</h2>
+        <!-- Kiwi-->
+        <div id="widget-holder"></div>
+        <script
+                data-currency="ILS"
+                data-lang="en"
+                data-affilid="haveacaronlywidgets"
+                data-from="tel-aviv_il"
+                data-departure="{{ data_departure }}"
+                data-return="{{ data_return }}"
+                data-cabin="ECONOMY"
+                data-transport-types="FLIGHT"
+                data-stop-number="1"
+                data-limit="20"
+                data-sort-by="price"
+                src="https://widgets.kiwi.com/scripts/widget-search-iframe.js">
+        </script>
+    </div>
+    <hr>
+    <br><br>
+    <!-- Booking widget-->
+    <h4>Hotel Booking</h4>
+    <div class="booking-div">
+        <ins class="bookingaff" data-aid="2342457" data-target_aid="2342457" data-prod="map" data-width="100%"
+             data-height="590" data-lang="en" data-currency="ILS" data-dest_id="0" data-dest_type="landmark"
+             data-latitude="34.7753949" data-longitude="32.4217786" data-landmark_name="Cyprus" data-mwhsb="0"
+             data-address="Paphos, Cyprus" data-zoom="9">
+            <!-- Anything inside will go away once widget is loaded. -->
+            <a href="//www.booking.com?aid=2342457">Booking.com</a>
+        </ins>
+        <script type="text/javascript">
+            (function (d, sc, u) {
+                var s = d.createElement(sc), p = d.getElementsByTagName(sc)[0];
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = u + '?v=' + (+new Date());
+                p.parentNode.insertBefore(s, p);
+            })(document, 'script', '//cf.bstatic.com/static/affiliate_base/js/flexiproduct.js');
+        </script>
+    </div>
+    <br>
+
+    <section>
+    <div class="container py-5">
+        <h1 class="text-center">Add a Review</h1>
+        <form action="/add_review" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="stars">Stars (1-5):</label>
+                <input type="number" class="form-control" id="stars" name="stars" min="1" max="5" required>
+            </div>
+            <div class="form-group">
+                <label for="text">Review:</label>
+                <textarea class="form-control" id="text" name="text" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <hr>
+        <h1 class="text-center">Reviews</h1>
+        <ul class="list-unstyled">
+            {% for review in reviews %}
+            <li class="media my-4">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">{{ review.title }}
+                    <span class="text-warning">
+                            <p>{{ review.stars * "★"}}</p>
+                    </span>
+                    </h5>
+                    <h6>{{ review.name }} </h6>
+                    {{ review.text }}
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</section>
+    <div>
+          <ul class="two-column-list">
+            <li><a href="https://www.kiwi.com/deep?affilid=haveacarisraeltravelwidjetsearch&currency=ILS&departure=anytime&destination=prague_cz&origin=tel-aviv_il&return=anytime&returnFromDifferentAirport=false&returnToDifferentAirport=false&stopNumber=1&transport=aircraft">Flights to Prague</a></li>
+            <li><a href="https://www.kiwi.com/deep?affilid=haveacarisraeltravelwidjetsearch&currency=ILS&departure=anytime&destination=london_gb&origin=tel-aviv_il&return=anytime&returnFromDifferentAirport=false&returnToDifferentAirport=false&stopNumber=1&transport=aircraft">Flights to London</a></li>
+            <li><a href="https://www.kiwi.com/deep?affilid=haveacarisraeltravelwidjetsearch&currency=ILS&departure=anytime&origin=tel-aviv_il&pageName=tilesPage&return=anytime&returnFromDifferentAirport=false&returnToDifferentAirport=false&stopNumber=1&transport=aircraft">Flights to Rome</a></li>
+            <li><a href="https://www.kiwi.com/deep?affilid=haveacarisraeltravelwidjetsearch&currency=ILS&departure=anytime&destination=rome_it&origin=tel-aviv_il&return=anytime&returnFromDifferentAirport=false&returnToDifferentAirport=false&stopNumber=1&transport=aircraft">Flights to Berlin</a></li>
+            <li><a href="https://www.kiwi.com/deep?affilid=haveacarisraeltravelwidjetsearch&currency=ILS&departure=anytime&destination=new-york-city_ny_us&origin=tel-aviv_il&return=anytime&returnFromDifferentAirport=false&returnToDifferentAirport=false&stopNumber=1&transport=aircraft">Flights to New York</a></li>
+            <li><a href="https://www.kiwi.com/deep?affilid=haveacarisraeltravelwidjetsearch&currency=ILS&departure=anytime&destination=larnaca_cy&origin=tel-aviv_il&return=anytime&returnFromDifferentAirport=false&returnToDifferentAirport=false&stopNumber=1&transport=aircraft">Flights to Larnaca</a></li>
+            <li><a href="https://www.kiwi.com/deep?affilid=haveacarisraeltravelwidjetsearch&currency=ILS&departure=anytime&destination=venice_it&origin=tel-aviv_il&return=anytime&returnFromDifferentAirport=false&returnToDifferentAirport=false&stopNumber=1&transport=aircraft">Flights to Venice</a></li>
+            <li><a href="https://www.kiwi.com/deep?affilid=haveacarisraeltravelwidjetsearch&currency=ILS&departure=anytime&destination=barcelona_es&origin=tel-aviv_il&return=anytime&returnFromDifferentAirport=false&returnToDifferentAirport=false&stopNumber=1&transport=aircraft">Flights to Barcelona</a></li>
+          </ul>
+
+    </div>
+    <br>
+
+
+{% endblock %}

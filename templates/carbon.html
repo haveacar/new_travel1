@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+{% block title %}
+    Carbon Calculate
+{% endblock %}
+
+{% block body %}
+    <div style="max-width:80%; display:block; margin: auto;">
+        <img class="img-fluid" src="{{ url_for('static', filename='img/forest.jpg') }}" alt="..."/>
+    </div>
+    <div style="text-align:center;">
+        <form method="post">
+            <br>
+          <label for="input1">From City:</label>
+          <input type="text" id="input1" name="input1" placeholder="Tel Aviv" required>
+          <br>
+          <label for="input2">To City: </label>
+          <input type="text" id="input2" name="input2" placeholder="Barcelona" required>
+          <br>
+          <label for="input3"> Passengers:</label>
+          <input type="number" id="input3" name="input3"  required min="1"><br><br>
+          <label><input type="checkbox" name="checkbox" value="True">Round Trip</label>
+          <div style="max-width:15%; display:block; margin: auto;">
+            <img class="img-fluid" src="{{ url_for('static', filename='img/green_feet.jpeg') }}" alt="..."/>
+            </div>
+          <input class="search-button" type="submit" value="Calculate" >
+        </form>
+        {% if carbon_kg is not none %}
+            <div style="text-align:left;">
+                <H2 style="margin-left: 50px;">
+                 {{ error }} </H2>
+                <H2 style="margin-left: 50px;">
+                 {{ from_city }} </H2>
+                <H2 style="margin-left: 50px;">
+                 {{ to_city }} </H2>
+                <H2 style="margin-left: 50px;">
+                 {{ distance }} </H2>
+                <H2 style="margin-left: 50px;">
+                 {{ carbon_kg }} </H2>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

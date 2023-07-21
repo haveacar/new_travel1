@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+{% block title %}
+    Currency convector
+{% endblock %}
+
+    {% block body %}
+    <div style="text-align:center;">
+        <p style="margin-top: 5px;">{{ data }}</p>
+    </div>
+    <div style="max-width:20%; display:block; margin: auto;">
+        <img class="img-fluid" src="{{ url_for('static', filename='img/money-exchange.png') }}" alt="..."/>
+    </div>
+    <form method="post" id="currency">
+        <input type="number" name="amount" placeholder="Enter amount" required min="1">
+        <br><br>
+        <label class="form-label" for="from_currency">From Currency:</label><br>
+        <select name="from_currency" id="from_currency">
+            {% for currency in currencies %}
+                <option value="{{ currency }}">{{ currency }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label class="form-label" for="to_currency">To Currency:</label><br>
+        <select name="to_currency" id="to_currency">
+            {% for currency in currencies %}
+                <option value="{{ currency }}">{{ currency }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <button type="submit">Convert</button>
+    </form>
+    {% if converted_amount is not none %}
+        <div style="text-align:center;">
+            <H2 style="margin-top: 5px;">
+                {{ amount }} {{ from_currency }} {{ converted_amount }} {{ to_currency }}</H2>
+        </div>
+        <br><br>
+
+    {% endif %}
+
+{% endblock %}

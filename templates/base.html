@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="This page to search cheap travel.Cheap air flights, cheap hotel booking" />
+        <meta name="author" content="Daniel Govnir" />
+        <title>{% block title %}{% endblock %}</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="../static/img/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7873653155158952"
+            crossorigin="anonymous"></script>
+        <meta name="google-site-verification" content="t3dKJSo8HNBuE87VvGTU3vlOcgmCDyKNCv8gyjooj_0" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="/">Cheap Flights from Israel</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="/currency">Currency Converter</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="/carbon">GreenFly Calculater</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/about">About</a></li>
+                                <li><a class="dropdown-item" href="/contact">Contact Us</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="/airlines">10 Most Green Airlines</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="/admin_login" class="button">Login</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                        <h1 class="display-4 fw-bolder">Cheap Flights from Israel</h1>
+                        <p class="lead fw-normal text-white-50 mb-0">Travel Smart-Cheap-Green</p>
+                    </div>
+            </div>
+        </header>
+         <!-- Body-->
+        {% block body %}{% endblock %}
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul class="list-inline">
+                            <li><a href="/currency">Currency convector</a></li>
+                            <li><a href="/carbon">GreenFly Calculate</a></li>
+                            <li><a href="/airlines">10 Most Green Airlines</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="m-0 text-center text-white">Copyright &copy; Israel Travel 2023
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="list-inline">
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/contact">Contact As</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    </body>
+</html>

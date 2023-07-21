@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block title %}
+    Top 10 Green airlines in the World
+{% endblock %}
+
+{% block body %}
+    <div style="display: flex; justify-content: center;">
+        <div style="width: 50%;">
+            <h1>So who are the top green airlines?</h1>
+                <hr>
+            <p>Therefore please see below a list made by Brighter Report, being the airlines referenced as the greenest
+                globally based on various criteria: the airlines knowing that the most recent planes consume much less than the
+                ones from 10-20 years ago, the number of passengers on board, the total number of seats (meaning seat density),
+                flight distance (as the takeoff and landing consume much more fuel than the flight itself), and the freight
+                share (meaning when planes transport also other items besides passenger luggage such as letters, parcels
+                etc.).</p>
+            <div style="max-width:50%; display:block; margin: auto;">
+            <img class="img-fluid" src="{{ url_for('static', filename='img/green_feet.jpeg') }}" alt="..."/>
+            </div>
+            <br>
+
+            <h4>1. Ryan Air - the unintendedl winner</h4>
+                <hr>
+            <p>The planes are always full, and seat density is fairly important (who doesn’t feel cramped on a RyanAir flight?).
+                The weight of the equipment is thus rather low compared to the one from KLM flights for example; RyanAir, being
+                a low-cost airline, has a very strict policy on luggage weight. Finally, they use relatively recent devices such
+                as the Airbus A319. Yeap, this one wins as the top green airline!</p>
+            <h4>2. Cathay Pacific - the sharer carrier</h4>
+                <hr>
+            <p>They are not low-cost and they make long-haul flights. They rank second as green airline though, which is rather
+                good. This Hong Kong airline has the newest fleet from the whole group which has a direct impact on the
+                emissions if its aircrafts. The seat density is also optimized and Cathay Pacific is actively engaged in doing
+                ‘freight share’ since 30% of its compartment is occupied by annexed cargos.</p>
+            <h4>3. Easy Jet - the optimizer</h4>
+                <hr>
+            <p>Similar to RyanAir, EasyJet optimizes its costs and therefore its fuel consumption; luggage policy, full planes
+                and seat density are more important for them than for traditional airlines. Their fleet is less recent that
+                Cathay’s or RyanAir’s which explains its 3rd position as green airline in the ranking.</p>
+            <h4>4. Continental Airlines - the good manager</h4>
+                <hr>
+            <p>Continental falls into 4th place on this green airlines ranking, not because of their sustainable development
+                policy, but simply because their long-haul nonstop flights are often very full. They also do a bit of ‘freight
+                share’, but their fleet is not the most recent one and the seat density is relatively normal. Globally, they are
+                better than the others with regards to managing fuel and filling up their planes. We can consider the two
+                airlines as being almost equally ranked as green airlines as they merged in 2012</p>
+            <h4>5. United Airlines - the pioneer</h4>
+                <hr>
+            <p>United Airlines has recently renewed a part of its fleet with more recent devices which are more environmentally
+                friendly. For the rest, they are pretty similar to Continental with the exception that they are somewhat less
+                efficient in ‘freight share’ and in filling up their planes. Launched in 2013, the United Airlines Eco-Skyes
+                program introduces the various strategies of the airline for reducing CO2 emissions. That includes the search of
+                alternative fuels, the development of partnerships and sponsoring (for example 50,000$ are donated each year to
+                environmental NGOs) and the setup of services such as Bandwagon (that allows travelers to connect in order to
+                share a taxi to go to the airport).
+
+                I must admit I was surprised to read they started utilizing biofuel in 2015. They even plan on reducing CO2
+                emissions by 50% thanks to this fuel called AltAir. So maybe in the future this airlines will rank top in the
+                green airlines ranking!</p>
+            <h4>6. Jetblue - the efficient player</h4>
+                <hr>
+            <p>Another American low-cost, mostly regional but that has a relatively recent fleet, flights on optimized distances
+                and does a bit of ‘freight share’. Just to make a comparison, someone flying Quantas between New York and Los
+                Angeles will have a carbon footprint 3 times more significant that somebody flying JetBlue.</p>
+            <h4>7. KLM - the follower</h4>
+                <hr>
+            <p>With a relatively old fleet of planes and flights that aren’t always full, KLM ranks only 7th in this hierarchy.
+                But the good thing is that the Air-France/KLM group invests quite a lot in R&D and Air-France has promised to
+                reduced CO2 emissions by 500,000 tons until 2020 (Plan Weight & Fuel) which corresponds roughly to 10% of its
+                total emissions (approximately 5,000,000 tons annually). But there’s an investment to become part of the top
+                green airlines.</p>
+            <h4>8. American Airlines - Not a triple AAA airline</h4>
+                <hr>
+            <p>On average, American Airlines performs better compared to a lot of the others but it’s not the best student in
+                the class. Planes are relatively recent (as much as those from JetBlue for example), but on all other criteria
+                AA could do better. They have recently signed a partnership with the Dallas Airport to reduce their carbon
+                footprint.</p>
+            <h4>9. Delta - the nurkle</h4>
+                <hr>
+            <p>The airline is far from excellent regarding the carbon footprint of its passengers. And even its website
+                communicates very little about responsible and sustainable development. I guess this is still not a priority for
+                them.</p>
+            <h4>10. Alaska Airlines - the diligent airline</h4>
+                <hr>
+            <p>Alaska Airlines is fairly transparent about its activities and its carbon emissions. We find all the related
+                reports on their website. Although at the bottom of the ranking, I want to highlight their initiative. The
+                classification was made in 2011, and as a result thereof,
+
+                Alaska Airlines decided to act because of an environmental program being set up in 2012. What is interesting is
+                that the program doesn’t only propose to reduce its carbon footprint based on the above mentioned criteria by
+                Brighter Planet, but also on other criteria such as passenger waste management, supplier transportation and the
+                resources utilized on board of their planes. Their goal is to reduce 20% of their CO2 emissions by 2020 and to
+                increase their biofuel utilization.
+
+                They bought more than 50 planes latest edition in 2012. Their program is detailed here. I personally find it
+                very interesting and I think that it is the only airline that has such a detailed, comprehensive program
+                covering all the aspects of a truly environmental aviation policy.</p>
+            </div>
+        </div>
+{% endblock %}
